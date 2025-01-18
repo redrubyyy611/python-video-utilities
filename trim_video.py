@@ -13,11 +13,19 @@ start_time = sys.argv[2]
 end_time = sys.argv[3]
 output_file = sys.argv[4]
 
+if not input_file.endswith(".mp4"):
+    print("The input file should be an mp4 file.")
+    sys.exit(2)
+
+if not output_file.endswith(".mp4"):
+    print("The output file should be an mp4 file.")
+    sys.exit(3)
+
 try:
     clip:mpy.VideoFileClip = mpy.VideoFileClip(filename=input_file).subclip(start_time, end_time)
     clip.write_videofile(output_file)
 except Exception as e:
     print(f"An error occurred and trimming the video failed: {e}")
-    sys.exit(1)
+    sys.exit(4)
 
 print(f"Video successfully trimmed and saved as {output_file}.")
