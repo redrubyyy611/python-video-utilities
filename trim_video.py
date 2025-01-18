@@ -1,8 +1,5 @@
 # Usage: python trim_video.py <input_file> <start_time> <end_time> <output_file>
-# Example: python trim_video.py video.mp4 5 10 trimmed_video.mp4
-#
-# The script uses the moviepy library to trim the video file. The start_time and end_time arguments should be in the format HH:MM:SS.
-# The output_file argument specifies the name of the trimmed video file.
+# Example: python trim_video.py video.mp4 0 5 trimmed_video.mp4
 
 import sys
 import moviepy.editor as mpy
