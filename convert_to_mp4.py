@@ -20,4 +20,4 @@ try:
     clip.write_videofile(output_file, audio=should_keep_audio)
 except Exception as e:
     print(f"An error occurred and conversion to MP4 failed: {e}")
-    sys.exit(1)
+    sys.exit(2)
